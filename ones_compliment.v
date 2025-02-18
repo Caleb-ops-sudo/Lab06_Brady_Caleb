@@ -14,7 +14,7 @@ module onescompliment(
     
     full_adder lsb_1(
     .A(A[0]),
-    .B(~B[0]),
+    .B(B[0]),
     .Y(intersum[0]),
     .Cin(1'b0),
     .Cout(carry[0])
@@ -22,7 +22,7 @@ module onescompliment(
     
     full_adder msb_1(
     .A(A[1]),
-    .B(~B[1]),
+    .B(B[1]),
     .Y(intersum[1]),
     .Cin(carry[0]),
     .Cout(carry[1])
@@ -30,7 +30,7 @@ module onescompliment(
     
     full_adder lsb_2(
     .A(A[2]),
-    .B(~B[2]),
+    .B(B[2]),
     .Y(intersum[2]),
     .Cin(carry[1]),
     .Cout(carry[2])
@@ -38,7 +38,7 @@ module onescompliment(
     
     full_adder msb_2(
     .A(A[3]),
-    .B(~B[3]),
+    .B(B[3]),
     .Y(intersum[3]),
     .Cin(carry[2]),
     .Cout(around)
