@@ -14,7 +14,13 @@ module top(
      onescompliment ones(
         .A(sw[5:2]),
         .B(sw[9:6]),
-        .Y(led[5:2])
+        .sum(led[5:2])
+     );
+     
+     twoscompliment twos(
+        .A(sw[9:2]),
+        .Y(led[13:6])
+     
      );
      
     
