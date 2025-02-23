@@ -1,12 +1,12 @@
 module fulladder(
     input A,B,C,
-    output Y,O
+    output Y,Cout
    );
    
    assign Y = 
    (~A & ~B & C) | (~A & B & ~C) | (A & B & C) | (A & ~B & ~C) ;
    
-   assign O = 
+   assign Cout = 
    (A & B) | (B & C) | (A & C);
    
 endmodule
