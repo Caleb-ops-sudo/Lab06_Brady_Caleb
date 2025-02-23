@@ -15,7 +15,7 @@ module onescompliment(
     
     fulladder A0(
     .A(A[0]),
-    .B(B[0]),
+    .B(~B[0]),
     .Y(intersum[0]),
     .C(1'b0),
     .Cout(carry0)
@@ -23,7 +23,7 @@ module onescompliment(
     
     fulladder A1(
     .A(A[1]),
-    .B(B[1]),
+    .B(~B[1]),
     .Y(intersum[1]),
     .C(carry0),
     .Cout(carry1)
@@ -31,7 +31,7 @@ module onescompliment(
     
     fulladder A2(
     .A(A[2]),
-    .B(B[2]),
+    .B(~B[2]),
     .Y(intersum[2]),
     .C(carry1),
     .Cout(carry2)
@@ -39,7 +39,7 @@ module onescompliment(
     
     fulladder A3(
     .A(A[3]),
-    .B(B[3]),
+    .B(~B[3]),
     .Y(intersum[3]),
     .C(carry2),
     .Cout(carry3)
@@ -55,7 +55,7 @@ module onescompliment(
     
     fulladder A4(
     .A(intersum[0]),
-    .B(carry03),
+    .B(carry3),
     .Y(sum[0]),
     .C(1'b0),
     .Cout(carry000)
